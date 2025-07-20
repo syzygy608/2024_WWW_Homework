@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script src="./js/index.js"></script>
+    <title>WWW Homework2</title>
+</head>
+<body class = "bg-blue-100">
+    <div class = "content flex items-center justify-center w-full m-0 overflow-auto">
+        <div class = "piano bg-slate-900 min-w-[40rem] m-auto p-6 rounded-2xl">
+            <div class = "title text-gray-400 flex flex-row justify-between items-center pb-4">
+                <div class = "name font-black text-lg m-3">
+                    HW2 PIANO
+                </div>
+                <div class = "flex flex-row items-center">
+                    <label for = "range" class = "block text-sm font-medium px-4">
+                        Volume
+                    </label>
+                    <input id = "range" type = "range" value = "50" class = "w-full h-2 bg-purple-200 rounded-lg cursor-pointer accent-purple-400">
+                </div>
+                <div class="flex items-center">
+                    <label for="record" class="mr-3 font-medium text-sm">Record</label>
+                    <div class="relative inline-block w-10 align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" name="record" id="record" onchange="startRecording(this)" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                        <label for="record" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                    </div>
+                </div>
+                <div>
+                    <button id = "play" class = "bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-2 mx-1 rounded" onclick="playRecord()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <button id = "clear" class = "bg-purple-500 hover:bg-purple-600 text-white font-bold py-1 px-2 mx-1 rounded" onclick="clearRecord()">
+                        Clear
+                    </button>
+                </div>
+            </div>
+            <div class = "piano-keyboard flex content-between flex-col max-h-[16rem] overflow-hidden relative select-none">
+                <div class = "flex">
+                    <button class="key white" id="key_a" onclick="playSound('a')">a</button>
+                    <button class="key white" id="key_s" onclick="playSound('s')">s</button>
+                    <button class="key white" id="key_d" onclick="playSound('d')">d</button>
+                    <button class="key white" id="key_f" onclick="playSound('f')">f</button>
+                    <button class="key white" id="key_g" onclick="playSound('g')">g</button>
+                    <button class="key white" id="key_h" onclick="playSound('h')">h</button>
+                    <button class="key white" id="key_j" onclick="playSound('j')">j</button>
+                    <button class="key white" id="key_k" onclick="playSound('k')">k</button>
+                    <button class="key white" id="key_l" onclick="playSound('l')">l</button>
+                    <button class="key white" id="key_semi" onclick="playSound(';')">;</button>
+                </div>
+                <div class = "flex" id = "black">
+                    <div></div>
+                    <button class="key black left-[2.5rem] absolute" id="key_w" onclick="playSound('w')">w</button>
+                    <button class="key black left-[6.5rem] absolute" id="key_e" onclick="playSound('e')">e</button>
+                    <button class="key black left-[14.5rem] absolute" id="key_t" onclick="playSound('t')">t</button>
+                    <button class="key black left-[18.5rem] absolute" id="key_y" onclick="playSound('y')">y</button>
+                    <button class="key black left-[22.5rem] absolute" id="key_u" onclick="playSound('u')">u</button>
+                    <button class="key black left-[30.5rem] absolute" id="key_o" onclick="playSound('o')">o</button>
+                    <button class="key black left-[34.5rem] absolute" id="key_p" onclick="playSound('p')">p</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

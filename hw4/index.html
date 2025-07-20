@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>台灣選舉地圖</title>
+        <link rel="stylesheet" href="./css/index.css" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+        <script src="./js/index.js" defer></script>
+        <script src="./js/map.js" defer></script>
+    </head>
+    <body>
+        <body>
+            <div
+                class="flex justify-center items-center bg-black overflow-auto h-[100vh] w-[100vw]"
+            >
+                <svg
+                    id="taiwan-svg"
+                    width="1200"
+                    height="800"
+                    class="min-h-[800px] min-w-[1200px]"
+                ></svg>
+            </div>
+
+            <div
+                id="info-window"
+                class="fixed bottom-0 right-0 m-4 p-4 min-w-[14rem] bg-purple-300/50 rounded-lg text-center"
+            >
+                <div>
+                    <div class="text-xl text-white">台灣選舉地圖</div>
+                    <h1
+                        id="county-name"
+                        class="text-lg font-bold"
+                    ></h1>
+                    <div
+                        id="county-info"
+                        class="text-sm w-[14rem] h-[14rem] hidden"
+                    ></div>
+                </div>
+            </div>
+            <div
+                id="year-select"
+                class="fixed bottom-0 left-0 m-4 p-4 bg-purple-300/50 rounded-lg text-center"
+            >
+                <div>
+                    <div class="text-lg text-white">選擇年份</div>
+                    <select
+                        id="year"
+                        class="text-lg bg-transparent border-b-2 border-white"
+                    >
+                        <option value="2024" selected>2024</option>
+                        <option value="2020">2020</option>
+                        <option value="2016">2016</option>
+                    </select>
+                </div>
+            </div>
+            <div
+                id="go-back"
+                class="hidden fixed bottom-0 w-full justify-center items-end pb-4"
+            >
+                <div>
+                    <a
+                        id="back"
+                        href="./index.html"
+                        class="text-lg text-white bg-purple-400 p-3 rounded-lg hover:bg-purple-500"
+                        >回上一頁</a
+                    >
+                </div>
+            </div>
+        </body>
+    </body>
+</html>

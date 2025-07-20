@@ -1,0 +1,90 @@
+:root {
+    --footer-height: 3vh;
+}
+.navbar{
+    height: 3vh;
+    background-color: rgb(206, 255, 207);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 3;
+}
+footer {
+    background-color: rgb(206, 255, 207);
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 3vh;
+    padding: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar > ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.logo {
+    height: 20px;
+    width: 20px;
+}
+.h_link {
+    text-decoration: none;
+    color: gray;
+    font-size: 25px;
+}
+.h_link:hover {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* dropdown */
+.dropbtn {
+    border: none;
+    background-color: inherit;
+    color: gray;
+    font-size: 25px;
+    min-height: 3%;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(208, 255, 206);
+    min-width: 12rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    color: gray;
+    padding: 4px 16px;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: rgb(157, 195, 157);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+}
+.content {
+    margin-top: 1vh;
+    min-height: calc(100vh - 3vh - var(--footer-height));
+    width: 100%;
+}

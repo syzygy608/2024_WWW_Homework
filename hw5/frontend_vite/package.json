@@ -1,0 +1,27 @@
+{
+  "name": "vite-js-tailwindcss-template",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port 5500 && npm run css",
+    "build": "vite build",
+    "preview": "vite preview --port 5500",
+    "css": "npx tailwindcss -i ./src/css/index.css -o ./src/css/tailwind.css --minify --watch"
+  },
+  "dependencies": {
+    "@nanoandrew4/vue3-carousel-3d": "^1.0.0",
+    "reconnecting-websocket": "^4.4.0",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "vue": "^3.2.25",
+    "vue3-carousel-3d": "^1.0.4",
+    "vue3-emoji-picker": "^1.1.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.4",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.1",
+    "vite": "^2.9.9"
+  }
+}

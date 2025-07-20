@@ -1,0 +1,105 @@
+.inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Welcome */
+@keyframes reveal {
+    0% {
+        content: "歡";
+    }
+    20% {
+        content: "歡迎";
+    }
+    40% {
+        content: "歡迎光";
+    }
+    60% {
+        content: "歡迎光臨";
+    }
+    80% {
+        content: "歡迎光臨本";
+    }
+    100% {
+        content: "歡迎光臨本館!";
+    }
+}
+.welcome {
+    font-size: 25px;
+    margin-top: 1%;
+}
+.welcome::after {
+    content: "歡";
+    animation: reveal 5s linear forwards;
+}
+.rotating_image {
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    opacity: 0;
+    animation: slide 60s infinite linear;
+}
+.slide:nth-child(1) {
+    background-image: url("../assets/新竹市役所.jpg");
+}
+.slide:nth-child(2) {
+    background-image: url("../assets/新竹東門城迎曦門.jpg");
+    animation-delay: 10s;
+}
+.slide:nth-child(3) {
+    background-image: url("../assets/新竹都城隍廟.jpg");
+    animation-delay: 20s;
+}
+.slide:nth-child(4) {
+    background-image: url("../assets/City_Walls.jpg");
+    animation-delay: 30s;
+}
+.slide:nth-child(5) {
+    background-image: url("../assets/Hsinchu_Municipal_Government_Hall.jpg");
+    animation-delay: 40s;
+}
+.slide:nth-child(6) {
+    background-image: url("../assets/Hsinchu_Zoo_aerial_photograph.jpg");
+    animation-delay: 50s;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+}
+.intro > .left {
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+.intro > .right {
+    width: 70%;
+    margin: 0 auto;
+}
+.right > .title {
+    padding-bottom: 3%;
+    padding-top: 1%;
+    font-size: 25px;
+    font-weight: bold;
+}

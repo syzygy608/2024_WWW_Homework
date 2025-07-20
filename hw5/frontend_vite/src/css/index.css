@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    @apply bg-purple-400 text-white font-semibold;
+}
+
+.message {
+    @apply m-3 p-2 rounded-lg;
+}
+  
+.own-message {
+    @apply self-end;
+
+}
+.system-message {
+    @apply self-center text-xs;
+}
+  
+.normal-message:not(.own-message) {
+    @apply self-start;
+}
+.sender-name.own {
+    @apply self-end text-xs mb-1;
+}
+.sender-name.other {
+    @apply self-start text-xs mb-1;
+}

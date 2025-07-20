@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content
+{
+    @apply min-h-screen;
+}
+.key
+{
+    @apply box-border border-black border-solid border text-center font-semibold align-text-bottom text-slate-400 flex items-end justify-center pb-2;
+}
+.white
+{
+    @apply w-16 h-[16rem] rounded-xl transition-all duration-200 ease-in-out bg-gradient-to-b from-white to-gray-300;
+}
+.white.pressed
+{
+    @apply shadow-black shadow-inner bg-gradient-to-b from-white to-gray-400;
+}
+.black
+{
+    @apply bg-gradient-to-t from-black to-gray-700 w-12 h-[12rem] rounded-b-xl;
+}
+.black.pressed
+{
+    @apply bg-gradient-to-b from-black to-gray-700;
+}
+#black
+{
+    @apply flex absolute top-0;
+}
+.toggle-checkbox:checked
+{
+    @apply right-0 border-purple-300;
+    @apply bg-purple-300;
+}
+.toggle-checkbox:checked + .toggle-label
+{
+    @apply bg-purple-100;
+}
